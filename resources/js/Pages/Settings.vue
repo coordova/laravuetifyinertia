@@ -1,7 +1,7 @@
 <template>
     <v-app>
         <v-container>
-            <h1>Home</h1>
+            <h1>Settings</h1>
             <Nav />
         </v-container>
     </v-app>
