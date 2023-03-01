@@ -1,17 +1,14 @@
 <template>
-    <v-app>
-        <v-container>
-            <h1>Users</h1>
-            <Nav />
-        </v-container>
-    </v-app>
+    <Layout>
+        <h1>Users</h1>
+    </Layout>
 </template>
 
 <script>
-import Nav from "@/Shared/Nav.vue";
+import Layout from "@/Shared/Layout.vue";
 
 export default {
-    components: { Nav }
+    components: {Layout }
 }
 </script>
 

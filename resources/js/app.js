@@ -16,6 +16,10 @@ const vuetify = createVuetify({
     components,
     directives,
 
+    /*theme: {
+        defaultTheme: 'dark'
+    },*/
+
     /*icons: {
         defaultSet: 'mdi',
         aliases,
@@ -39,6 +43,20 @@ createInertiaApp({
             .use(vuetify)
             /*-------------------------*/
             .mount(el)
+    },
+    progress: {
+        // The delay after which the progress bar will appear
+        // during navigation, in milliseconds.
+        delay: 250,
+
+        // The color of the progress bar.
+        color: '#29d',
+
+        // Whether to include the default NProgress styles.
+        includeCSS: true,
+
+        // Whether the NProgress spinner will be shown.
+        showSpinner: true,
     },
 })
 
