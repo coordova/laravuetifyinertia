@@ -1,7 +1,18 @@
 <template>
     <v-app>
         <v-app-bar color="grey-lighten-4" density="comfortable" :elevation="2">
-            <v-app-bar-title>My App</v-app-bar-title>
+            <!--<header class="flex jsutify-between">
+                <div class="flex items-center">-->
+                    <v-app-bar-title>
+                        My App
+                    </v-app-bar-title>
+                    <p class="text-xs">
+                        Welcome Back, {{ username }}
+                    </p>
+                <!--</div>
+            </header>-->
+
+
             <template v-slot:append>
                 <Nav />
                 <v-btn icon="mdi-dots-vertical"></v-btn>
@@ -24,7 +35,13 @@
 import Nav from "@/Shared/Nav.vue";
 export default {
     name: "Layout",
-    components: { Nav }
+    components: { Nav },
+
+    computed: {
+        username() {
+            return this.$page.props.auth.user.username;
+        }
+    }
 }
 </script>
 
