@@ -1,11 +1,12 @@
 <template>
     <!--<Layout>-->
-        <h1>Settings</h1>
+    <Head title="Settings" />
+    <h1>Settings</h1>
     <!--</Layout>-->
 </template>
 
-<script>
-
+<script setup>
+// import {Head} from "@inertiajs/vue3";
 </script>
 
 <style scoped>

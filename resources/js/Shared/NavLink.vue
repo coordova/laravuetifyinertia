@@ -8,7 +8,7 @@
 import {Link} from "@inertiajs/vue3";
 export default {
     name: "NavLink",
-    components: { Link },
+    // components: { Link },
     props: {
         active: Boolean,
     }

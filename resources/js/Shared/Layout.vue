@@ -1,4 +1,8 @@
 <template>
+    <Head>
+        <title>My App</title>
+        <meta type="description" content="This the description of my app" head-key="description" />
+    </Head>
     <v-app>
         <v-app-bar color="grey-lighten-4" density="comfortable" :elevation="2">
             <!--<header class="flex jsutify-between">
@@ -38,9 +42,11 @@
 
 <script>
 import Nav from "@/Shared/Nav.vue";
+import {Head} from "@inertiajs/vue3";
+
 export default {
     name: "Layout",
-    components: { Nav },
+    components: { Nav, Head },
 
     computed: {
         username() {
