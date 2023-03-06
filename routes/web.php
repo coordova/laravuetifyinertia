@@ -18,14 +18,27 @@ Route::get('/', function () {
 });
 
 Route::get('/users', function () {
-    // sleep(2);
+
+    /*return \App\Models\User::paginate(10)->through(fn($user)=>[
+        'id' => $user->id,
+        'name' => $user->name,
+        'email' => $user->email
+    ]);*/
+
     return Inertia::render('Users', [
-        'time' => now()->toTimeString()
+        'users' => \App\Models\User::paginate(10)->through(fn($user)=>[
+            'id' => $user->id,
+            'name' => $user->name,
+            'email' => $user->email
+        ])
     ]);
 });
 
 Route::get('/settings', function () {
-    return Inertia::render('Settings');
+    // sleep(2);
+    return Inertia::render('Settings', [
+        'time' => now()->toTimeString()
+    ]);
 });
 
 Route::post('/logout', function () {
